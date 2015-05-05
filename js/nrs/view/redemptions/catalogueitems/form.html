@@ -1,0 +1,211 @@
+<div class="container">		
+	<div class="container">
+		<div class="panel panel-default">
+			<div class="title panel-heading">
+				<div class="row">
+					<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<h4 id="redemption-form-title"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Catalogue Items</h4>
+					</div>
+					<div id="panel-right" class="col-lg-6 col-md-6 col-sm-6 col-xs-6" ng-show="form_view">
+						<button type="button" class="btn btn-primary" ng-click="edit_form()">Edit</button>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="form-inline">
+					<div class="row">
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">									
+								<label for="bank" class="item">Bank:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" ng-show="form_view">
+								<label style="text-align: left">{{bank}}</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" ng-hide="form_view">
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+									<select class="form-control" 
+											ng-model="bank"
+								            ng-options="bank.value as bank.name for bank in select_bank"
+								            ng-change="selectedBankChanged()" >									
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="status" class="item">Status:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" ng-show="form_view">
+								<label style="text-align: left">{{status}}</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" ng-hide="form_view">
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+									<select class="form-control" 
+											ng-model="status"
+								            ng-options="status.value as status.name for status in select_status"
+								            ng-change="selectedStatusChanged()" >									
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="item_code" class="item">Item Code:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" ng-show="form_view">
+								<label style="text-align: left">{{item_code}}</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" ng-hide="form_view">
+								<input type="text" class="form-control" id="item_code"/>
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="catalogue" class="item">Catalogue Name:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" ng-show="form_view">
+								<label style="text-align: left">{{catalogue}}</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" ng-hide="form_view">
+								<input type="text" class="form-control" id="catalogue"/>
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="item_desc" class="item">Item Description:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" ng-show="form_view">
+								<label style="text-align: left">{{item_desc}}</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" ng-hide="form_view">
+								<input type="text" class="form-control" id="item_desc"/>
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="service_provider" class="item">Service Provider:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" ng-show="form_view">
+								<label style="text-align: left">{{service_provider}}</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" ng-hide="form_view">
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+									<select class="form-control" 
+											ng-model="service_provider"
+								            ng-options="service_provider.value as service_provider.name for service_provider in select_service_provider"
+								            ng-change="selectedServiceProviderChanged()" >									
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="item_category" class="item">Item Category:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" ng-show="form_view">
+								<label style="text-align: left">{{item_category}}</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" ng-hide="form_view">
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+									<select class="form-control" 
+											ng-model="item_category"
+								            ng-options="item_category.value as item_category.name for item_category in select_item_category"
+								            ng-change="selectedItemCategoryChanged()" >									
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row" ng-hide="form_view">
+						<div class="command">
+							<button type="button" class="btn btn-primary" ng-click="save_form()">Save</button>
+							<button type="button" class="btn btn-danger" ng-click="cancel_form()">Cancel</button>
+						</div>
+					</div>
+				</div>					
+			</div>
+		</div>		
+		<div class="panel panel-default" ng-show="form_view">
+			<div class="title panel-heading">
+				<div class="row">
+					<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<h4><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Redemption Requirements</h4>
+					</div>
+					<div id="panel-right" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<button class="btn btn-primary" data-toggle="modal" href="#myModal">Add New</button>
+					</div>
+				</div>
+			</div>	
+			<div class="panel-body">
+				<bdo-table selectlist="perPageList" table-menu="RedemptionReq" page-info="pageInfo" columns="columns" data="data" actions="{view: false, edit: true, delete: true}"></bdo-table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="myModal" role="dialog" tabindex="-1" data-backdrop="static">
+    <div class="modal-dialog" id="Modaldraggable">
+      <div class="modal-content modal-lg">
+        <div class="modal-header">
+          <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+          <h4 class="modal-title">Add New</h4>
+        </div>
+        <div class="modal-body">
+        	<div class="row">
+				<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">									
+						<label for="redempt_type" class="item">Redemption Type:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<input type="text" class="form-control" id="redempt_type"/>
+					</div>
+				</div>
+				<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">									
+						<label for="pts_req" class="item">Points Required:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<input type="text" class="form-control" id="pts_req"/>
+					</div>
+				</div>
+				<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">									
+						<label for="increments" class="item">Increments:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<input type="text" class="form-control" id="increments"/>
+					</div>
+				</div>
+				<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">									
+						<label for="fast_track" class="item">Fast Track Cash:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<input type="text" class="form-control" id="fast_track"/>
+					</div>
+				</div>
+				<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">									
+						<label for="partner" class="item">Partner:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<input type="text" class="form-control" id="partner"/>
+					</div>
+				</div>
+				<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">									
+						<label for="conversion" class="item">Conversion:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<input type="text" class="form-control" id="conversion"/>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" type="button" ng-click="save_modal()">Save</button>
+          <button class="btn btn-default" type="button" ng-click="cancel_modal()">Cancel</button>
+        </div>
+      </div>
+    </div>
+</div>

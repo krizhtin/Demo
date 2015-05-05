@@ -1,0 +1,449 @@
+
+	<div class="row row-space">
+		<div class="container">
+			<table class="table-bordered search-table">
+				<tbody>
+					<tr>
+						<td>
+							<h5><span class="glyphicon glyphicon-search"></span>Filter by:</h5>
+						</td>
+						<td>
+							<select style="min-width:150px;" id="filter" class="form-control">
+								<option value="username">Username</option>
+								<option value="name">Name</option>
+								<option value="group_id">Group Profile</option>
+								<option value="access_level_id">Access Level</option>
+								<option value="status">Status</option>
+								<option value="created_date">Creation Date</option>
+								<option value="expiry_date">Expire Date</option>
+							</select>
+						</td>
+						<td>
+							<input class="form-control" aria-disabled="false" aria-readonly="false" placeholder="Type Here . .">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="container-fluid grid">
+		<div class="panel panel-default">
+			<div class="title panel-heading">
+				<div class="row">
+					<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<h4>Customer Information</h4>
+					</div>
+				</div>
+			</div>
+				<div class="panel-body">
+					<br/>
+						<div class="row clearfix">
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							 		<label for="customer_number" class="item">Customer Number:</label>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							 		<label id="customer_number" class="data"></label>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							 		<label for="account_name" class="item">Account Name:</label>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							 		<label id="account_name" class="data"></label>
+								</div>
+							</div>
+						</div>
+						
+						<br>
+						
+						<div class="row clearfix">
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							 		<label for="billing_address" class="item">Billing Address:</label>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							 		<label id="billing_address" class="data"></label>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							 		<label for="date_of_birth" class="item">Date of Birth:</label>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							 		<label id="date_of_birth" class="data"></label>
+								</div>
+							</div>
+						</div>
+						
+						<br>
+						
+						<div class="row clearfix">
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							 		<label for="postal_code" class="item">Postal Code:</label>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							 		<label id="postal_code" class="data"></label>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							 		<label for="home_no" class="item">Home No.:</label>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							 		<label id="home_no" class="data"></label>
+								</div>
+							</div>
+						</div>
+						
+						<br>
+						
+						<div class="row clearfix">
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							 		<br>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							 		<br>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							 		<label for="office_no" class="item">Office No.:</label>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							 		<label id="office_no" class="data"></label>
+								</div>
+							</div>
+						</div>
+						
+						<br>
+						
+						<div class="row clearfix">
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							 		<br>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							 		<br>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							 		<label for="mobile_no" class="item">Mobile No.:</label>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							 		<label id="mobile_no" class="data"></label>
+								</div>
+							</div>
+						</div>
+					
+					<br>
+				</div>
+			</div>
+			<div class="panel panel-default">
+			<div class="title panel-heading">
+				<div class="row">
+					<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<h4>Accounts Information</h4>
+					</div>
+					<div id="panel-right" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<button id="view" class="btn btn-default" data-toggle="modal" data-target="#viewinfo"><span class="glyphicon glyphicon-search"></span> View</button>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+			</div>
+			</div>
+		</div>
+		<div class="modal fade" id="viewinfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" style="width: 900px">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Card and Account Information</h4>
+		      </div>
+		      <div class="modal-body">
+		        <div class="info-area">
+	        		<div class="row clearfix">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label for="bank" class="item">Bank:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						 		<label id="bank" class="data"></label>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label for="close_code" class="item">Close Code:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						 		<label id="close_code" class="data"></label>
+							</div>
+						</div>
+					</div>
+					
+					<br>
+
+					<div class="row clearfix">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label for="card_number" class="item">Card Number:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						 		<label id="card_number" class="data"></label>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label for="close_day" class="item">Close Day:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						 		<label id="close_day" class="data"></label>
+							</div>
+						</div>
+					</div>
+					
+					<br>
+
+					<div class="row clearfix">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label for="account_number" class="item">Account Number:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						 		<label id="account_number" class="data"></label>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label for="cancel_code" class="item">Cancel Code:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						 		<label id="cancel_code" class="data"></label>
+							</div>
+						</div>
+					</div>
+					
+					<br>
+
+					<div class="row clearfix">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label for="product_type" class="item">Product Type:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						 		<label id="product_type" class="data"></label>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label for="cancel_day" class="item">Cancel Day:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						 		<label id="cancel_day" class="data"></label>
+							</div>
+						</div>
+					</div>
+					
+					<br>
+
+					<div class="row clearfix">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label for="card_plan" class="item">Card Plan:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						 		<label id="card_plan" class="data"></label>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label for="billing_cycle" class="item">Billing Cycle:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						 		<label id="billing_cycle" class="data"></label>
+							</div>
+						</div>
+					</div>
+					
+					<br>
+
+					<div class="row clearfix">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label for="activation_date" class="item">Activation Date:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						 		<label id="activation_date" class="data"></label>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label for="account_currency" class="item">Account Currency:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						 		<label id="account_currency" class="data"></label>
+							</div>
+						</div>
+					</div>
+					
+					<br>
+
+					<div class="row clearfix">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label for="card_expiry" class="item">Card Expiry:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						 		<label id="card_expiry" class="data"></label>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label for="card_profile" class="item">Card Profile:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						 		<label id="card_profile" class="data"></label>
+							</div>
+						</div>
+					</div>
+					
+					<br>
+
+					<div class="row clearfix">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label for="member_since" class="item">Member Since:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						 		<label id="member_since" class="data"></label>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label for="account_style" class="item">Account Style:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						 		<label id="account_style" class="data"></label>
+							</div>
+						</div>
+					</div>
+		        </div>
+		        <div class="tab-area">
+		        	<div role="tabpanel">
+					  <!-- Nav tabs -->
+					  <ul class="nav nav-tabs nav-tabs-style" role="tablist">
+					    <li role="presentation" class="active"><a href="#pointssummary" aria-controls="pointssummary" role="tab" data-toggle="tab">Points Summary</a></li>
+					    <li role="presentation"><a href="#transactionhistory" aria-controls="transactionhistory" role="tab" data-toggle="tab">Transaction History</a></li>
+					    <li role="presentation"><a href="#redemptionhistory" aria-controls="redemptionhistory" role="tab" data-toggle="tab">Redemption History</a></li>
+					    <li role="presentation"><a href="#rewardsprogram" aria-controls="rewardsprogram" role="tab" data-toggle="tab">Rewards Program</a></li>
+					  </ul>
+
+					  <!-- Tab panes -->
+					  <div class="tab-content tab-content-style">
+					    <div role="tabpanel" class="tab-pane active" id="pointssummary">
+					    	<div class="form-inline clearfix">
+								<div class="row clearfix">
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+									 		<label for="previous_balance" class="item">Previous Balance:</label>
+										</div>
+										<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+									 		<label id="previous_balance" class="data"></label>
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+									 		<label for="total_available_points" class="item">Total Available Points:</label>
+										</div>
+										<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+									 		<label id="total_available_points" class="data"></label>
+										</div>
+									</div>
+								</div>
+								
+								<br>
+
+								<div class="row clearfix">
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+									 		<label for="points_earned" class="item">Points Earned:</label>
+										</div>
+										<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+									 		<label id="points_earned" class="data"></label>
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+									 		<label for="bonus" class="item">Bonus:</label>
+										</div>
+										<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+									 		<label id="bonus" class="data"></label>
+										</div>
+									</div>
+								</div>
+								
+								<br>
+
+								<div class="row clearfix">
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+									 		<label for="adjustments" class="item">Adjustments:</label>
+										</div>
+										<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+									 		<label id="adjustments" class="data"></label>
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+									 		<label for="on_hold" class="item">On-hold:</label>
+										</div>
+										<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+									 		<label id="on_hold" class="data"></label>
+										</div>
+									</div>
+								</div>
+								
+								<br>
+
+								<div class="row clearfix">
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+									 		<label for="points_redeemed" class="item">Points Redeemed:</label>
+										</div>
+										<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+									 		<label id="points_redeemed" class="data"></label>
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+									 		<label for="expired" class="item">Expired:</label>
+										</div>
+										<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+									 		<label id="expired" class="data"></label>
+										</div>
+									</div>
+								</div>
+							</div>
+					    </div>
+					    <div role="tabpanel" class="tab-pane" id="transactionhistory">
+					    	Transaction History content tab
+					    </div>
+					    <div role="tabpanel" class="tab-pane" id="redemptionhistory">
+					    	Redemption History content tab
+					    </div>
+					    <div role="tabpanel" class="tab-pane" id="rewardsprogram">
+					    	Rewards Program content tab
+					    </div>
+					  </div>
+
+					</div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>

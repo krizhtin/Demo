@@ -1,0 +1,50 @@
+<div class="row clearfix ng-scope" id="to-center">
+	<div class="col-lg-4 col-md-4 column"></div>
+	<div class="col-lg-4 col-md-4 column">
+		<table class="table-bordered search-table">
+			<tbody>
+				<tr>
+					<td>
+						<h5><span class="glyphicon glyphicon-search"></span>Filter by:</h5>
+					</td>
+					<td>
+						<select style="min-width:150px;" id="search_column" class="form-control" ng-model="searchColumn">
+							<option value="accessLevelName">Access Level Name</option>
+							<option value="accessLevel.parentAccessLevel.accessLevelName">Parent Access Level</option>
+						</select>
+					</td>
+					<td>
+						<input class="form-control" aria-disabled="false" aria-readonly="false" placeholder="Type Here . ." ng-model="searchValue">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="col-lg-4 col-md-4 column"></div>
+</div>
+<div class="container-fluid grid">
+	<div class="panel panel-default">
+		<div class="title panel-heading">
+			<div class="row">
+				<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<h4><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Access Level</h4>
+				</div>
+				<div id="panel-right" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<span class="panel-right-button">
+						<a ui-sref="Create Access Levels"><button id="create-new-user-button" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create New Access Level</button></a>
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="panel-body">
+			<br/>
+			<div>
+				<bdo-table selectlist="perPageList" table-menu="bdoTable" page-info="pageInfo" columns="columns" data="data" actions="{view: false, edit: true, delete: true}"></bdo-table>
+			</div>
+			<div id="panel-right" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<br>
+			</div>
+		</div>
+	</div>
+</div>

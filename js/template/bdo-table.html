@@ -1,0 +1,63 @@
+<div class="table-reponsive">
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th width="12.8%" ng-hide="action == false"></th>
+				<th ng-repeat="column in columns">
+					<span ng-show="column.sortable == false">{{column.label}}</span>
+					<a ng-hide="column.sortable == false" ng-click="sort(column.field)" href="javascript:void(0)">{{column.label}}</a>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="d in data" ng-init="d.$index = $index">
+				<td ng-hide="action == false">
+					<a ng-show="actions.view" class="btn btn-info" ng-click="view($index, d)" href="javascript:void(0)">
+						<span class="glyphicon glyphicon-search"></span>
+					</a>
+					<a ng-show="actions.edit" class="btn btn-warning" ng-click="edit($index, d)" href="javascript:void(0)">
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a>
+					<a ng-show="actions.delete" class="btn btn-danger" ng-click="delete($index, d)" href="javascript:void(0)">
+						<span class="glyphicon glyphicon-trash"></span>
+					</a>
+					<a ng-repeat="c in actions.custom" class="c.class" href="javascript:void(0)" ng-click="c.click(d.$index, d)">{{c.content}}</a>
+				</td>
+				<td ng-repeat="column in columns" ng-switch="column.field_type">
+					<select ng-switch-when="dropdown" class="form-control"  ng-model="d[column.field]">
+						<option ng-repeat="item in column.dropdownlist ? column.dropdownlist : column.dropdowncallback(d)" value="{{item.text}}">{{item.text}}</option>
+					</select>
+					<button ng-switch-when="button" ng-click="column.button_function(d)" type="button" class="btn btn-default form-control">{{column.button_label}}</button>
+					<input ng-switch-when="textbox" type="text" class="form-control" ng-model="d[column.field]"/>
+					<input ng-switch-when="checkbox" type="checkbox" class="form-control" ng-model="d[column.field]"/>
+					<div ng-switch-default>
+						<div ng-switch="column.datatype">
+							<div ng-switch-when="date">{{convertToFormatDate(d[column.field])}}</div>
+							<div ng-switch-default>{{d[column.field]}}</div>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<nav style="text-align: center;" ng-show="pageInfo">
+		<select class="form-control" ng-model="perPage">
+			<option ng-repeat="item in selectlist" value="{{item.value}}">{{item.text}}</option>
+		</select>
+		<ul class="pagination">
+	    	<li>
+	      		<a ng-click="previous()" href="javascript:void(0)" aria-label="Previous">
+	        		<span aria-hidden="true">&laquo;</span>
+	      		</a>
+	    	</li>
+	    	<li ng-repeat="page in pager.pages" ng-class="{active: page == pager.active}">
+	    		<a href="javascript:void(0)" ng-click="gotoPage(page)">{{page}}</a>
+	    	</li>
+	    	<li>
+	     		<a ng-click="next()" href="javascript:void(0)" aria-label="Next">
+	        		<span aria-hidden="true">&raquo;</span>
+	      		</a>
+	    	</li>
+	  	</ul>
+	</nav>
+</div>

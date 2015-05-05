@@ -1,0 +1,250 @@
+<form ng-submit="save()">
+<div class="container-fluid grid">
+    <div class="panel panel-default">
+        <div class="title panel-heading">
+            <div class="row">
+                <div id="panel-left" class="col-lg-6 col-md-6">
+                    <h4>General Information</h4>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="panel-body">
+
+                <div id="panel-right" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br></div>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-4 col-md-4">
+                            <label for="task_id" class="item">Task ID:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8">
+                            <input class="form-control" ng-model="task.id" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-4 col-md-4">
+                            <label for="status" class="item">Status:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8">
+                            <input class="form-control" ng-model="task.status" />
+                        </div>
+                    </div>  
+                </div>
+                
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-4 col-md-4">
+                            <label for="process_job" class="item">Process Job:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8">
+                            <select class="form-control" ng-model="task.processJob">
+                                <option>none</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-4 col-md-4">
+                            <label for="task_name" class="item">Task Name:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8">
+                            <input class="form-control" ng-model="task.name" />
+                        </div>
+                    </div>  
+                </div>
+                
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-4 col-md-4">
+                            <label for="pre_requisite_task" class="item">Pre-requisite Task:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8">
+                            <select class="form-control" ng-model="task.preRequisiteTask">
+                                <option>none</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-4 col-md-4">
+                            <label for="has_pre_requisite_task" class="item">Require Pre-requisite as Completed:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8">
+                            <input type="checkbox" id="has_pre_requisite_task" ng-model="task.requirePrerequisite" />
+                        </div>
+                    </div>  
+                </div>
+                
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-4 col-md-4">
+                            <label for="expected_number_of_files" class="item">Expected Number of Files:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8">
+                            <input class="form-control" ng-model="task.numFiles" />
+                        </div>
+                    </div>  
+                    <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-4 col-md-4">
+                            <label for="expected_number_of_files" class="item">Report Folder:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8">
+                            <input class="form-control" ng-model="task.reportFolder" />
+                        </div>
+                    </div>
+                </div>
+
+                <div id="panel-right" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid grid">
+    <div class="panel panel-default">
+        <div class="title panel-heading">
+            <div class="row">
+                <div id="panel-left" class="col-lg-6 col-md-6">
+                    <h4>Task Schedule Details</h4>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="panel-body">
+
+                <div id="panel-right" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br></div>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <label for="timing_schedule" class="item">Timing Schedule:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            <select class="form-control" ng-model="task.schedule.timing">
+                                <option selected="selected">None</option>
+                                <option selected="selected">Daily</option>
+                                <option>Weekly</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <label for="days" class="item">Days of the Week:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            <input class="form-control" ng-model="task.schedule.days" />
+                        </div>
+                    </div>  
+                </div>
+                
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <label for="start_date" class="item">Start Date:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            <input class="form-control" placeholder="change to date/time format" ng-model="task.schedule.startDate" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <label for="end_date" class="item">End Date:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            <input class="form-control" placeholder="change to date/time format" ng-model="task.schedule.endDate" />
+                        </div>
+                    </div>  
+                </div>
+                
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <label for="start_time" class="item">Start Time:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            <input class="form-control" ng-model="task.schedule.startTime" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <label for="allow_snooze" class="item">Allow Snooze:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            <input type="checkbox" id="allow_snooze" ng-model="task.schedule.allowSnooze" />
+                        </div>
+                    </div>  
+                </div>
+                
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <label for="recheck_times" class="item">Recheck Times:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            <input class="form-control" ng-model="task.schedule.recheckTimes" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <label for="every_n_minutes" class="item">Every "N" Minutes:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            <input class="form-control" ng-model="task.schedule.frequency" />
+                        </div>
+                    </div>  
+                </div>
+
+                <div id="panel-right" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid grid">
+    <div class="panel panel-default">
+        <div class="title panel-heading">
+            <div class="row">
+                <div id="panel-left" class="col-lg-6 col-md-6">
+                    <h4>File Folder Information</h4>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <tr>
+                    <th></th>
+                    <th>SFTP Host</th>
+                    <th>Folder Path</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                </tr>
+                <tr ng-repeat="information in task.filesInformation">
+                    <td ng-click="removeFileInformation($index)"><span class="btn btn-danger glyphicon glyphicon-trash"></span></td>
+                    <td><input ng-model="information.host" class="form-control" type="text" /></td>
+                    <td><input ng-model="information.path" class="form-control" type="text" /></td>
+                    <td><input ng-model="information.username" class="form-control" type="text" /></td>
+                    <td><input ng-model="information.password" class="form-control" type="password" /></td>
+                </tr>
+            </table>
+            <div class="clearfix">
+                <button ng-click="newFileFolderInformation()" id="add_new" class="btn btn-default">Add New</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix">
+    <div id="buttons" class="command">
+        <input type="submit" class="btn btn-default" value="Save" id="save" />
+        <a ui-sref="batch-scheduler"><button id="cancel" class="btn btn-default">Cancel</button></a>
+    </div>
+</div>
+</form>

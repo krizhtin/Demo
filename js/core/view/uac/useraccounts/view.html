@@ -1,0 +1,168 @@
+<div ng-controller="ViewUserAccountsController" class="container">
+	<div class="panel panel-default">
+		<div class="title panel-heading">
+			<div class="row">
+				<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<h4>
+						<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+						{{user.fullName}}
+					</h4>
+				</div>
+				<div id="panel-right" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<button class="btn btn-primary" ng-clicl="generate_report_button()">
+						<span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+						Generate Report
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="panel-body">
+			<div class="form-inline">
+				<table class="table" style="width: 100%;"  align="left">
+					 <tr>
+						 <th style="vertical-align:middle;text-align:left">
+						 	<input type="hidden" id="user_id" value="{{user.id}}"/>
+						 	Username:
+						 </th>
+						  <td>
+							<label id="name" style="text-align: left">{{user.username}}</label>
+						 </td>
+						 <th style="vertical-align:middle;text-align:left">
+						 	Email Address:
+						 </th>
+						  <td>
+							<label id="name" style="text-align: left">{{user.email}}</label>
+						 </td>
+					 </tr>
+					 
+					 <tr>
+						 <th style="vertical-align:middle;text-align: left">
+						 	<label for="name" class="item" style="text-align: left">Name:</label>
+						 </th>
+						 <td>
+						 	<label id="name" style="text-align: left">{{user.fullName}}</label>
+						 </td>
+						 <th style="vertical-align:middle;text-align: left">
+						 	<label for="contact_details" class="item" style="text-align: left">Contact Details:</label>
+						 </th>
+						 <td>
+						 	<label id="contact_details"style="text-align: left">{{user.contactDetails}}</label>
+						 </td>
+					 </tr>
+					 
+					 <tr>
+						 <th style="vertical-align:middle;text-align: left">
+						 	<label for="dept" class="item" style="text-align: left">Department:</label>
+						 </th>
+						 <td>
+						 	<label id="depart" style="text-align: left">{{user.department}}</label>
+						 </td>
+						 <th style="vertical-align:middle;text-align: left">
+						 	<label for="group_id" class="item" style="text-align: left">Group Profile:</label>
+						 </th>
+						 <td>
+						 	<label id="group_id"style="text-align: left">{{user.groupProfileList}}</label>
+						 </td>
+					 </tr>
+					 
+					 <tr>
+						 <th style="vertical-align:middle;text-align: left">
+						 	<label for="location" class="item" style="text-align: left">Location:</label>
+						 </th>
+						 <td>
+							<label id="location" style="text-align: left">{{user.location}}</label>
+						 </td>
+						 <th style="vertical-align:middle;text-align: left">
+						 	<label for="access_level_name" class="item" style="text-align: left">Access Level:</label>
+						 </th>
+						 <td>
+							<label id="access_level_name" style="text-align: left">{{user.accessLevel.accessLevelName}}</label>
+						 </td>
+					 </tr>
+					 
+					 <tr>
+						 <th style="vertical-align:middle;text-align: left">
+						 	<label for="position" class="item" style="text-align: left" >Position:</label>
+						 </th>
+						 <td>
+							<label id="position" style="text-align: left">{{user.position}}</label>
+						 </td>
+						 <th style="vertical-align:middle;text-align:left">
+						 	<label for="status" class="item" style="text-align: left" >Status:</label>
+						 </th>
+						 <td>
+							<label id="status" style="text-align: left" >{{user.status}}</label>
+						 </td>
+					 </tr>
+					 
+					 <tr>
+						 <th style="vertical-align:middle;text-align:left">
+						 	<label for="created_date" class="item" style="text-align: left">Creation Date:</label>
+						 </th>
+						 <td>
+							<label id="created_date" style="text-align: left" >{{user.createDate}}</label>
+						 </td>
+						 <th style="vertical-align:middle;text-align:left">
+						 	<label for="expiry_date" class="item" style="text-align: left">Expiry Date:</label>
+						 </th>
+						 <td>
+							<label id="expiry_date_detail" style="text-align: left" >{{user.expiryDate}}</label>
+						 </td>
+					 </tr>
+					 
+					 <tr>
+						 <th style="vertical-align:middle;text-align:left">
+						 	<label for="last_mod_date" class="item" style="text-align: left">Last Modification Date:</label>
+						 </th>
+						 <td>
+							<label id="last_mod_date" style="text-align: left">{{user.modifiedDate}}</label>
+						 </td>
+						 <th style="vertical-align:middle;text-align:left">
+						 	<label for="remarks" class="item" style="text-align: left">Remarks:</label>
+						 </th>
+						 <td>
+							<label id="remarks" style="text-align: left">{{user.remarks}}</label>
+						 </td>
+					 </tr>
+					 
+					 <tr> <td></td> <td></td> <td> </td> <td> </td> </tr>
+					 
+				 </table>
+				<div class="row">
+					<div class="command">
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<br>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<br>
+							</div>
+							<button type="button" id="save" class="btn btn-default"
+								style="margin-right: 20px;">Reset Password</button>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<font style="font-size: 15px"><b>Associated Banks</b></font>
+		</div>
+		<div class="panel-body">
+			<table class="table table-hover table-condensed">
+				<tr>
+					<th>Bank Code</th>
+					<th>Bank Name</th>
+				</tr>
+				<tr ng-repeat="bank in user.banks._embedded.banks">
+					<td>{{bank.code}}</td>
+					<td>{{bank.bankName}}</td>
+				</tr>
+			</table>
+			<a ng-click="back_button()" class="btn btn-default pull-right btn-xs"><span
+				class="glyphicon glyphicon-chevron-left"></span> Back</a>&nbsp;
+		</div>
+	</div>
+</div>

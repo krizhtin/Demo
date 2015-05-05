@@ -1,0 +1,40 @@
+<div class="container">
+	<div class="panel panel-default">
+		<div class="title panel-heading">
+			<h4><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>{{ formTitle }}</h4>
+		</div>
+		<div class="panel-body">
+ 			<div class="form-inline">
+				<div class="row clearfix">
+					<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+							<input type="hidden" id="access_level_id" class="form-control" ng-model="accessLevel.id"/>
+							<label for="access_level_name" class="item">Access Level Name:</label>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<input type="text"  id="accessLevel_accessLevelName" class="form-control" ng-model="accessLevel.accessLevelName"/>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+							<label for="parent_access_level" class="item">Parent Access Level:</label>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">							
+							<select id="accessLevel_parentAccessLevel" class="form-control" ng-model="accessLevel.parentAccessLevel._links.self.href">
+								<option ng-repeat="item in accessLevelsList" value="{{item._links.self.href}}">{{item.accessLevelName}}</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="command">
+						<button type="submit" class="btn btn-primary" ng-click="save_button()" >Save</button>
+						<button type="button" class="btn btn-danger" ng-click="cancel_button()">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

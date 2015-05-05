@@ -1,0 +1,44 @@
+
+	<div class="row row-space">
+		<div class="container">
+			<table class="table-bordered search-table">
+				<tbody>
+					<tr>
+						<td>
+							<h5><span class="glyphicon glyphicon-search"></span>Filter by:</h5>
+						</td>
+						<td>
+							<select style="min-width:150px;" id="filter" class="form-control">
+								<option value="username">Prize ID</option>
+								<option value="">Prize Name</option>
+								<option value="">Prize Description</option>
+								<option value="">Rewards Program</option>
+							</select>
+						</td>
+						<td>
+							<input class="form-control" aria-disabled="false" aria-readonly="false" placeholder="Type Here...">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="container-fluid grid">
+		<div class="panel panel-default">
+			<div class="title panel-heading">
+				<div class="row">
+					<div id="panel-left" class="col-lg-6 col-md-6">
+						<h4>Raffle Prizes</h4>
+					</div>
+					<div id="panel-right" class="col-lg-6 col-md-6">
+						<span class="panel-right-button">
+							<a ui-sref="Raffle Prizes Form"><button id="create-new-user-button" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create New</button></a></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel-body">
+				<bdo-table selectlist="perPageList" page-info="pageInfo" columns="columns" table-menu="bdoTable" data="data" actions="{view: false, edit: true, delete: true}"></bdo-table>
+			</div>
+		</div>
+	</div>

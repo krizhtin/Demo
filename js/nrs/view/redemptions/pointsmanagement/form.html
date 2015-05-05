@@ -1,0 +1,266 @@
+<div class="container">		
+	<div class="container">
+		<div class="panel panel-default">
+			<div class="title panel-heading">
+				<div class="row">
+					<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<h4 id="redemption-form-title"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Card Holder Information</h4>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="form-inline">
+					<div class="row">
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">									
+								<label for="card_num" class="item">Card Number:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<label id="card_num" style="text-align: left">{{card_num}}</label>
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="acct_num" class="item">Account Number:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<label id="acct_num" style="text-align: left">{{acct_num}}</label>
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="ch_name" class="item">Card Holder Name:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<label id="ch_name" style="text-align: left">{{ch_name}}</label>
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="cust_num" class="item">Customer Number:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<label id="cust_num" style="text-align: left">{{cust_num}}</label>
+							</div>
+						</div>
+					</div>
+				</div>			
+			</div>
+		</div>		
+		<div class="panel panel-default">
+			<div class="title panel-heading">
+				<div class="row">
+					<div id="panel-left" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Current Points Balances (ACCOUNT LEVEL)</h4>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+					<br/>
+				<div>
+					<bdo-table selectlist="perPageList" table-menu="CurrentPoints" page-info="pageInfo" columns="columns" data="data" action="false"></bdo-table>
+				</div>
+				<div id="panel-right" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<br>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="title panel-heading">
+				<div class="row">
+					<div id="panel-left" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Action</h4>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="form-inline">
+					<div class="row">
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="select_action" class="item">Select Action:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<select class="form-control" 
+										ng-model="action"
+							            ng-options="action.value as action.name for action in select_action"
+							            ng-change="selectedItemChanged()" >									
+								</select>
+							</div>
+						</div>
+					</div>
+					<div ng-switch on="action">
+						<div class="row" ng-switch-when="transfer">
+							<div ng-show="transfer_form">
+								<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+										<label for="pts_transfer" class="item">Points to Transfer:</label>
+									</div>
+									<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+										<input type="text" class="form-control" id="pts_to_transfer"/>
+									</div>
+								</div>
+								<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">									
+										<label for="beneficiary_card_num" class="item">Beneficiary Card Number:</label>
+									</div>
+									<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+										<label id="beneficiary_card_num" style="text-align: left">{{beneficiary_card_num}}</label>
+									</div>
+								</div>
+								<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+										<label for="beneficiary_acc_name" class="item">Account Name:</label>
+									</div>
+									<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+										<label id="beneficiary_acc_name" style="text-align: left">{{beneficiary_acc_name}}</label>
+									</div>
+								</div>
+								<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+										<label for="beneficiary_product" class="item">Product:</label>
+									</div>
+									<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+										<label id="beneficiary_product" style="text-align: left">{{beneficiary_product}}</label>
+									</div>
+								</div>
+								<div class="panel-body">
+									<br/>
+									<div>
+										<bdo-table selectlist="perPageList" table-menu="BeneficiaryInfo" page-info="pageInfo2" columns="columns2" data="data2" action="false"></bdo-table>
+									</div>
+									<div id="panel-right" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row" ng-switch-when="adjustment">
+							<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+									<label for="pts_adjust" class="item">Points to Adjust:</label>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+									<input type="text" class="form-control" id="pts_to_adjust" tabindex="1" />
+								</div>
+							</div>
+						</div>
+						<div class="row" ng-switch-when="pooling">							
+							<div class="panel-body">
+								<br/>
+								<div>
+									<bdo-table selectlist="perPageList" table-menu="PoolingTable" page-info="pageInfo3" columns="columns3" data="data3" actions="{view: false, edit: true, delete: false}"></bdo-table>
+								</div>
+								<div id="panel-right" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+									<br>
+								</div>
+							</div>
+							<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>
+							<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+									<label for="pts_pooling" class="item">Total Points For Pooling:</label>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+									<label id="total_pool_pts" style="text-align: left">{{total_pool_pts}}</label>
+								</div>
+							</div>
+						</div>
+						<div class="row" ng-switch-when="holdlift">
+							<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+									<label for="pts_holdlift" class="item">Number of Points:</label>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+									<input type="text" class="form-control" id="pts_to_holdlift" tabindex="1" />
+								</div>
+							</div>
+							<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">							
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+									<label for="select_action" class="item">Action:</label>
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+									<select class="form-control" 
+											ng-model="hlaction"
+								            ng-options="hlaction.value as hlaction.name for hlaction in holdlift_action"
+								            ng-change="holdliftaction()">									
+									</select>
+								</div>
+							</div>						
+						</div>
+					</div>
+					<div class="row" ng-show="save_cancel_button">
+						<div class="command">
+							<button type="submit" class="btn btn-primary" ng-click="save_button()">Save</button>
+							<button type="button" class="btn btn-danger" ng-click="cancel_button()">Cancel</button>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--POINTS TRANSFER SEARCH FORM MODAL-->
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="transfermodal" role="dialog" tabindex="-1" data-backdrop="static">
+    <div class="modal-dialog modal-lg" id="Modaldraggable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+          <h4 class="modal-title">Enter Card Number</h4>
+        </div>
+        <div class="modal-body">
+        	<div class="row">
+	            <div class="form-group col-lg-10 col-md-10 col-sm-10 col-xs-10">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<label for="enter_card_nbr" class="item">Card Number:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<input type="text" class="form-control" id="enter_card_nbr" ng-model="enter_card_nbr">
+					</div>
+				</div>
+				<div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<button type="button" class="btn btn-primary" ng-click="search()">Go</button>
+				</div>
+				<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<br/>
+					<div>
+						<bdo-table selectlist="perPageList" table-menu="BeneficiaryInfo" page-info="pageInfo2" columns="columns2" data="data2" actions="{view: false, edit: true, delete: false}"></bdo-table>
+					</div>
+					<div id="panel-right" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<br>
+					</div>
+				</div>
+			</div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!--POINTS POOLING EDIT FORM MODAL-->
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="poolmodal" role="dialog" tabindex="-1" data-backdrop="static">
+    <div class="modal-dialog" id="Modaldraggable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+          <h4 class="modal-title">Points to Pool</h4>
+        </div>
+        <div class="modal-body">
+        	<div class="row">
+	            <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<label for="sub_card_nbr" class="item">Points to Pool:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<input type="text" class="form-control" id="sub_card_nbr" ng-model="sub_card_nbr">
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" ng-click="poolpts_save()" type="button">Save</button>
+          <button class="btn btn-default" ng-click="poolpts_cancel()" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+		<div class="container-fluid grid">
+			<div class="panel panel-default">
+				<div class="title panel-heading">
+					<div class="row">
+						<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<h4><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Enrollment</h4>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel-body">
+					<div class="row row-space">
+						<div class="container">
+							<table class="table-bordered search-table">
+								<tbody>
+									<tr>
+										<td>
+											<h5><span class="glyphicon glyphicon-search"></span>Filter by:</h5>
+										</td>
+										<td>
+											<select style="min-width:150px;" id="filter" class="form-control">
+												<option value="username">Customer Number</option>
+												<option value="name">Account Number</option>
+												<option value="name">Card Number</option>
+												<option value="name">Account Name</option>
+											</select>
+										</td>
+										<td>
+											<input class="form-control" aria-disabled="false" aria-readonly="false" placeholder="Type Here . .">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<bdo-table selectlist="perPageList" table-menu="bdoTable" page-info="pageInfo" columns="enrollmentcolumns" data="enrollmentdata" actions="{view: false, edit: false, delete: false}"></bdo-table>
+
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid grid">
+			<div class="panel panel-default">
+				<div class="title panel-heading">
+					<div class="row">
+						<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<h4><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Enrollment Records</h4>
+						</div>
+						<div id="panel-right" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<span class="panel-right-button">
+								<button id="create-new-button" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create New </button></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel-body">
+					<bdo-table selectlist="perPageList" table-menu="bdoTable" page-info="pageInfo" columns="recordscolumns" data="recordsdata" actions="{view: false, edit: true, delete: false}"></bdo-table>
+				</div>
+			</div>
+		</div>

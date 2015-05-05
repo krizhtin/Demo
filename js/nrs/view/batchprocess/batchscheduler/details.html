@@ -1,0 +1,108 @@
+<div class="container">
+    <div class="panel panel-default">
+        <div class="title panel-heading">
+            <h4><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> {{ formTitle}}</h4>
+        </div>
+        <div class="panel-body">
+            <div class="form-inline">
+                <div class="row clearfix">
+                    <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <input type="hidden" id="user_id" ng-model="user.user_id">
+                            <label for="username" class="item">Task ID:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            {{task.taskID}}
+                        </div>
+
+                    </div>
+                    <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <label for="email_address" class="item">Task Name:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            {{task.taskName}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <label for="first_name" class="item">Process Job:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            {{task.processJob}}
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <label for="contact_details" class="item">Timing Schedule:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            {{task.timingSchedule}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <label for="middle_name" class="item">Days:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            {{task.days}}
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <label for="dept" class="item">Start Date:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            {{task.startDate}}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 validation hide">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><br></div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"><small class="mn hide"></small></div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 validation hide" style="float: right;">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><br></div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"><small class="dept hide"></small></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <label for="last_name" class="item">Finish Date:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            {{task.finishDate}}
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <label for="position" class="item">Status:</label>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            {{task.status}}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 validation hide">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><br></div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"><small class="ln hide"></small></div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 validation hide" style="float: right;">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><br></div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"><small class="pos hide"></small></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="command">
+                        <button type="submit" class="btn btn-primary" ng-click="back()" id="save">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

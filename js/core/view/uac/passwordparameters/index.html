@@ -1,0 +1,133 @@
+<div class="container">
+	<div class="panel panel-default">
+		<div class="title panel-heading">
+			<div class="row">
+				<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<h4><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Password Parameters</h4>
+				</div>
+			</div>
+		</div>
+		<div class="panel-body">
+			<div class="form-inline">
+				<div class="row clearfix">
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">						
+						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+							<label for="init_pass_validity" class="item"><small>Initial Password Validity [days]:</small></label>
+						</div>
+						<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+						<input type="text" class="input form-control" id="init_pass_validity" value="" tabindex="1">
+						</div>
+					</div>
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+							<label for="pass_length" class="item"><small>Password Minimum Length:</small></label>
+						</div>
+						<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+							<input type="text" class="input form-control" id="pass_length" value="" tabindex="6">
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="row clearfix">
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+							<label for="login_tries" class="item"><small>Allowed Password Tries [per login]:</small></label>
+						</div>
+						<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+							<input type="text" class="input form-control" id="login_tries" value="" tabindex="2">
+						</div>
+					</div>
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+							<label for="day_tries" class="item"><small>Allowed Password Tries in a Day:</small></label>
+						</div>
+						<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+							<input type="text" class="input form-control" id="day_tries" value="" tabindex="7">
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="row clearfix">
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+							<label for="pass_history_count" class="item"><small>Password History Count:</small></label>
+						</div>
+						<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+							<input type="text" class="input form-control" id="pass_history_count" value="" tabindex="3">
+						</div>
+					</div>
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+							<label for="	" class="item"><small>Password Validity [days]:</small></label>
+						</div>
+						<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+							<input type="text" class="input form-control" id="pass_validity" value="" tabindex="8">
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="row clearfix">
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+							<label for="pass_notification" class="item"><small>Change Password Notification [days before exp. date]:</small></label>
+						</div>
+						<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+							<input type="text" class="input form-control" id="pass_notification" value="" tabindex="4">
+						</div>
+					</div>
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+							<label for="allowed_inactive" class="item"><small>Account Allowed to be Inactive [days]:</small></label>
+						</div>
+						<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+							<input type="text" class="input form-control" id="allowed_inactive" value="" tabindex="9">
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="row clearfix">
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+							<label for="sys_retention" class="item"><small>System Retention Period [months]:</small></label>
+						</div>
+						<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+							<input type="text" class="input form-control" id="sys_retention" value="" tabindex="5">
+						</div>
+					</div>
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+							<label for="acc_default" class="item"><small>Account Default Expiration [days]:</small></label>
+						</div>
+						<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+							<input type="text" class="input form-control" id="acc_default" value="" tabindex="5">
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="command">
+						<button type="button" class="btn btn-primary" id="save"  tabindex="10">Save</button>
+						<button type="button" class="btn btn-danger" id="cancel" tabindex="11"  data-toggle="modal" data-target="#cancelform">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="cancelform" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-style">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Confirmation Message</h4>
+			</div>
+			<div class="modal-body">
+				<span class="panel-left"><img class="confirm-icon" src="images/confirmation-image.png"></span><span>Are you sure you want to cancel?</span>
+			</div>
+			<div class="modal-footer">
+				<a ui-sref="/bdo/nrs/home.html"><button type="button" class="btn btn-default">Yes</button></a>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+			</div>
+		</div>
+	</div>
+</div>

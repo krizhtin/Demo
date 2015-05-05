@@ -1,0 +1,206 @@
+<div class="container-fluid grid">
+	<div class="panel panel-default">
+		<div class="title panel-heading">
+			<div class="row">
+				<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<h4><span class="glyphicon" aria-hidden="true"></span>General Information</h4>		
+				</div>
+			</div>
+		</div>
+		<div class="panel-body">
+			<div class="form-inline">
+				<div class="container-fluid">
+					
+					<div class="row clearfix">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label class="item" for="bank_code" >Bank:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<div id="bank_code"></div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label class="item" for="status" >Status:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						 		<label class="data" id="status"></label>
+							</div>
+						</div>
+					</div>
+					<br>
+					<div class="row clearfix">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label class="item" for="prog_name" >Rewards Program:</label>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+								<input type="text" class="input form-control" id="rew_prog" value="${rew_prog}"  disabled="disabled" placeholder="auto-generated" ng-model="rewardProgram.rewardsProgramId" />
+							</div>
+							<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+								<input type="text" class="input form-control" id="prog_name" placeholder="Program Name" ng-model="rewardProgram.programName" />
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label class="item" for="perpetual" >Perpetual:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<input type="checkbox" id="perpetual" ng-model="rewardProgram.perpetual" />
+							</div>
+						</div>
+					</div>
+					
+					<br>
+					
+					<div class="row clearfix">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label class="item" for="req_enr" >Requires Enrollment:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<div id="req_enr"></div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-req-hide">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					 			<label class="item" for="auto_enroll" >Auto Enroll:</label>
+							</div>
+							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+								<input type="checkbox" id="auto_enroll" ng-model="rewardProgram.auto_enroll" />
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label class="item" for="charge_fee" >Charge Fee:</label>
+							</div>
+							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+								<input type="checkbox" id="charge_fee" ng-model="rewardProgram.charge_fee" />
+							</div>
+						</div>
+					</div>
+					
+					<br>
+					
+					<div class="row clearfix">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label class="item" for="valid_from" >Valid From:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<div id="valid_from"></div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label class="item" for="valid_until" >Valid Until:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<div id="valid_until"></div>
+							</div>
+						</div>
+					</div>
+					
+					<br>
+					
+					<div class="row clearfix">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						 		<label class="item" for="push_notif" >Push Notification:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<input type="checkbox" id="push_notif" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid grid">
+	<div class="panel panel-default">
+		<div class="title panel-heading">
+			<div class="row">
+				<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<h4><span class="glyphicon" aria-hidden="true"></span>Program Eligibility</h4>				
+				</div>
+				<div id="panel-right" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<button ng-click="create()" id="program-eligibility-jqx-grid-create-button" type="button" class="btn btn-primary">Create <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+					</div>
+				</div>
+		</div>
+		<div class="panel-body">
+			<div class="form-inline">
+				<input id="program-egibility-query" type="hidden"/>
+				<div id="program-egibility-query" class="command">
+					***Query***
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid grid">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<tabset>
+			    <tab ng-controller="GridPointsComputationController" ng-click="setActive('pointsComputation')">
+			      <tab-heading>
+			        Points Computation
+			      </tab-heading>
+					<bdo-table selectlist="perPageList" page-info="pageInfo" table-menu="bdoTable" columns="columns" data="data" actions="{edit: true, delete: true}"></bdo-table>
+			    </tab>
+			    
+			    <tab ng-controller="GridBonusComputationController" ng-click="setActive('bonusComputation')">
+			      <tab-heading>
+			        Bonus Computation
+			      </tab-heading>
+					<bdo-table selectlist="perPageList" page-info="pageInfo" table-menu="bdoTable" columns="columns" data="data" actions="{edit: true, delete: true}"></bdo-table>
+			    </tab>
+			    
+			    <tab ng-controller="GridRedemptionRequirementsController" ng-click="setActive('redemptionRequirements')">
+			      <tab-heading>
+			        Redemption Requirements
+			      </tab-heading>
+					<bdo-table selectlist="perPageList" page-info="pageInfo" table-menu="bdoTable" columns="columns" data="data" actions="{edit: true, delete: true}"></bdo-table>
+			    </tab>
+			    
+			    <tab ng-controller="GridPointsCreditingController" ng-click="setActive('pointsCrediting')">
+			      <tab-heading>
+			        Points Crediting
+			      </tab-heading>
+					<bdo-table selectlist="perPageList" page-info="pageInfo" table-menu="bdoTable" columns="columns" data="data" actions="{edit: true, delete: true}"></bdo-table>
+			    </tab>
+			    
+			    <tab ng-controller="GridPointsExpiryController" ng-click="setActive('pointsExpiry')">
+			      <tab-heading>
+			        Points Expiry
+			      </tab-heading>
+					<bdo-table selectlist="perPageList" page-info="pageInfo" table-menu="bdoTable" columns="columns" data="data" actions="{edit: true, delete: true}"></bdo-table>
+			    </tab>
+			    
+			    <tab ng-controller="GridChargeFeeInformationController" ng-click="setActive('chargeFeeInformation')">
+			      <tab-heading>
+			        Charge Fee Information
+			      </tab-heading>
+					<bdo-table selectlist="perPageList" page-info="pageInfo" table-menu="bdoTable" columns="columns" data="data" actions="{edit: true, delete: true}"></bdo-table>
+			    </tab>
+			    
+			    <tab ng-controller="GridPushNotificationController" ng-click="setActive('pushNotifications')">
+			      <tab-heading>
+			        Push Notification
+			      </tab-heading>
+					<bdo-table selectlist="perPageList" page-info="pageInfo" table-menu="bdoTable" columns="columns" data="data" actions="{edit: true, delete: true}"></bdo-table>
+			    </tab>
+			  </tabset>
+		  </div>
+	</div>	
+</div>
+
+<div class="row" id="command_buttons">
+	<div class="command">
+		<button type="button" class="btn btn-primary" ng-click="save_button()">Save</button>
+		<button type="button" class="btn btn-danger" ng-click="cancel_button()">Cancel</button>
+	</div>
+</div>

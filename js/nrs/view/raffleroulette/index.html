@@ -1,0 +1,54 @@
+
+		<div class="container-fluid grid">
+			<div class="panel panel-default">
+				<div class="title panel-heading">
+					<div class="row">
+						<div id="panel-left" class="col-lg-6 col-md-6">
+							<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Raffle Roulette</h4>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel-body">
+					<br/>
+					<div class="tab-custom-panel">
+						 <h4>Raffle Draw Setup</h4>
+						 <div class="tab-panel-body">
+						 	<div class="row row-space">
+						 		<div class="col-md-1 col-md-offset-2">Program Code:</div>
+						 		<div class="col-md-2">
+									<select class="form-control" id="raffleRoulette_programCode" ng-model="raffleRoulette.programCode">
+										<option ng-repeat="prog in raffleRoulette.programCodeList track by $index" {{ $index == 0 ? "selected" : ''}} value="{{prog.value}}">{{prog.name}}</option>
+									</select>
+						 		</div>
+						 		<div class="col-md-1 col-md-offset-2">Draw Date:</div>
+						 		<div class="col-md-2">
+									<div class="input-group input-date">
+		                                <input id='draw_date' ng-model="raffleRoulette.draw_date" type="text" class="form-control" disabled="disabled" />
+		                                <span class="input-group-addon">
+		                                    <span class="glyphicon-calendar glyphicon"></span>
+		                                </span>
+		                            </div>
+						 		</div>
+						 	</div>
+						 	<div class="row row-space">
+						 		<div class="col-md-1 col-md-offset-2">Drawn By:</div>
+						 		<div class="col-md-2">
+						 			<input class="form-control" disabled="disabled" value="admin">
+						 		</div>
+						 	</div>
+						 	<div class="row row-space text-center">
+						 		<!-- <button class="btn btn-default" id="startroulette" data-toggle="modal" data-target="#rouletteconfirm" ng-click="startroulette()">Start Roulette</button> -->
+						 		<button class="btn btn-default" id="startroulette" ng-click="startroulette()">Start Roulette</button>
+						 	</div>
+						 </div>
+					</div>
+					<div class="tab-custom-panel tab-space">
+						<h4>Raffle Draw Winners</h4>
+						<div class="tab-panel-body">
+							<bdo-table selectlist="perPageList" page-info="pageInfo" columns="columns" data="data" actions="{view: false, edit: false, delete: false}"></bdo-table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>

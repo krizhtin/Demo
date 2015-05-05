@@ -1,0 +1,94 @@
+<div class="modal-header" data-ng-init="init()">
+    <h3 class="modal-title">Raffle Roulette</h3>
+</div>
+<div class="modal-body">
+
+	<div class="row row-space">
+	 	<div class="tab-custom-panel">
+		 	<div class="tab-panel-body">
+		 		<div class="row row-space">
+		 			<div class="col-md-2">
+		 				Prize Level:
+		 			</div>
+		 			<div class="col-md-4">
+		 				<input class="form-control" name="prize_level" id="prize_level">
+		 			</div>
+		 			<div class="col-md-2">
+		 				Prize
+		 			</div>
+		 			<div class="col-md-4">
+		 				<select id="prize_dropdown" class="form-control">
+							<option ng-repeat="prize in raffleRoulette.prizeList track by $index" {{ $index == 0 ? "selected" : ''}} value="{{prize.value}}">{{prize.name}}</option>
+		 				</select>
+		 			</div>
+		 		</div>
+		 		<div class="row row-space">
+		 			<div class="col-md-2">
+		 				Include Past Winners:
+		 			</div>
+		 			<div class="col-md-4">
+		 				<input type="checkbox" id="is_past_winner">
+		 			</div>
+		 			<div class="col-md-2">
+		 				Number of Winners:
+		 			</div>
+		 			<div class="col-md-4">
+		 				<input class="form-control" name="no_of_winners" id="no_of_winners">
+		 			</div>
+		 		</div>
+		 		<div class="row row-space">
+		 			<div class="col-md-2">
+		 				Include Drawn Winners:
+		 			</div>
+		 			<div class="col-md-4">
+		 				<input type="checkbox" id="is_drawn_winner">
+		 			</div>
+		 			<div class="col-md-2">
+		 				Number of Entries:
+		 			</div>
+		 			<div class="col-md-4">
+		 				<input class="form-control" name="no_of_entries" disabled="disabled" id="no_of_entries">
+		 			</div>
+		 		</div>
+		 		<div class="row text-center">
+		 			<button class="btn btn-default" id="drawwinners" ng-click="drawWinners()">Draw Winners</button>
+		 		</div>
+		 		<div class="row row-space">
+		 			<div class="animation-roulette text-center">
+		 			<h2>{{drawroll}}</h2>
+		 			</div>
+		 		</div>
+		 		<div class="row row-space text-center">
+		 			<button class="btn btn-default" id="start" disabled="disabled" ng-click="drawStart()">Start</button>
+		 			<button class="btn btn-default btn-distance" id="stop" disabled="disabled" ng-click="drawStop()">Stop</button>
+		 		</div>
+		 		<div class="row row-space light-border">
+			 		<div class="col-md-6">
+				 		<div class="row row-space">
+						 	<div class="col-md-5 row-space">
+				 				Prize Level Winners:
+				 			</div>
+				 			<div class="col-md-7 row-space">
+				 				<input class="form-control" name="prize_level_winners" id="prize_level_winners" disabled="disabled">
+				 			</div>
+				 			<div class="col-md-5">
+				 				Remaining Slots:
+				 			</div>
+				 			<div class="col-md-7">
+				 				<input class="form-control" name="remaining_slots" id="remaining_slots" disabled="disabled">
+				 			</div>
+				 		</div>
+			 		</div>
+			 		<div class="col-md-6">
+			 			<div class="row row-space text-center">
+			 				<div class="col-md-12 row-space">
+			 					<button class="btn btn-default btn-distance btn-fit" id="done-button" ng-click="raffleEnd()" disabled="disabled">Done</button>
+			 				</div>
+			 			</div>
+			 		</div>
+		 		</div>
+		 	</div>
+		</div>
+	</div>
+
+</div>

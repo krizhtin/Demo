@@ -1,0 +1,310 @@
+<div class="container">		
+	<div class="container">
+		<div class="panel panel-default">
+			<div class="title panel-heading">
+				<div class="row">
+					<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<h4 id="redemption-form-title"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Card Holder Information</h4>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="form-inline">
+					<div class="row">
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">									
+								<label for="account" class="item">Account Number:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<label id="account" style="text-align: left">{{account}}</label>
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="acct_name" class="item">Account Name:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<label id="acct_name" style="text-align: left">{{acc_name}}</label>
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="card_num" class="item">Card Number:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<label id="card_num" style="text-align: left">{{card_num}}</label>
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="product" class="item">Product:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<label id="product" style="text-align: left">{{product}}</label>
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="close_code" class="item">Close Code:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<label id="close_code" style="text-align: left">{{close_code}}</label>
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="past_due" class="item">Past Due Status:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<label id="past_due" style="text-align: left">{{past_due}}</label>
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="exp_date" class="item">Expiry Date:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<label id="exp_date" style="text-align: left">{{exp_date}}</label>
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="out_bal" class="item">Outstanding Balance:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<label id="out_bal" style="text-align: left">{{out_bal}}</label>
+							</div>
+						</div>
+					</div>
+				</div>			
+			</div>
+		</div>		
+		<div class="panel panel-default">
+			<div class="title panel-heading">
+				<div class="row">
+					<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<h4><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Table Fields and Values</h4>
+					</div>
+					<div id="panel-right" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<button class="btn btn-primary" data-toggle="modal" href="#myModal">Add New</button>
+					</div>
+				</div>
+			</div>	
+			<div class="panel-body">
+				<tabset>
+				    <tab select="setTabID(1)">
+				      <tab-heading>
+				        Catalogue Item
+				      </tab-heading>
+				      <bdo-table selectlist="perPageList" table-menu="CatalogueGrid" page-info="pageInfo" columns="columns" data="data" actions="{view: false, edit: true, delete: true}"></bdo-table>
+				    </tab>				    
+				    <tab select="setTabID(2)">
+				      <tab-heading>
+				        Coupons
+				      </tab-heading>
+				      <bdo-table selectlist="perPageList" table-menu="CouponsGrid" page-info="pageInfo2" columns="columns2" data="data2" actions="{view: false, edit: true, delete: true}"></bdo-table>
+				    </tab>
+				    <tab select="setTabID(3)">
+				      <tab-heading>
+				        Vouchers
+				      </tab-heading>
+				      <bdo-table selectlist="perPageList" table-menu="VouchersGrid" page-info="pageInfo3" columns="columns3" data="data3" actions="{view: false, edit: true, delete: true}"></bdo-table>
+				    </tab>
+			  </tabset>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Redeem Items Modal-->
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="myModal" role="dialog" tabindex="-1" data-backdrop="static">
+    <div class="modal-dialog" id="Modaldraggable">
+      <div class="modal-content modal-lg">
+        <div class="modal-header">
+          <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+          <h4 class="modal-title">Redeemable Items</h4>
+        </div>
+        <div class="modal-body">
+        		<table class="table-bordered search-table">
+					<tbody>
+						<tr>
+							<td>
+								<h5><span class="glyphicon glyphicon-search"></span>Filter by:</h5>
+							</td>
+							<td>
+								<select style="min-width:150px;" id="filter" class="form-control">
+									<option value="item_code">Item Code</option>
+									<option value="item_cat">Item Category</option>
+									<option value="desc">Description</option>
+									<option value="Status">Status</option>
+								</select>
+							</td>
+							<td>
+								<input class="form-control" aria-disabled="false" aria-readonly="false" placeholder="Type Here...">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="panel-body">
+						<br/>
+					<div>
+						<bdo-table selectlist="perPageList" table-menu="CatalogueSearchGrid" page-info="pageInfo4" columns="columns4" data="data4" actions="{view: true, edit: false, delete: false}"></bdo-table>
+					</div>
+					<div id="panel-right" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<br>
+					</div>
+				</div>
+		
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" type="button">View Cart</button>
+          <button class="btn btn-default" data-dismiss="modal" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="fasttrack1" role="dialog" tabindex="-1" data-backdrop="static">
+    <div class="modal-dialog" id="Modaldraggable2">
+      <div class="modal-content modal-lg">
+        <div class="modal-header">
+          <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+          <h4 class="modal-title">{{item_code}}</h4>
+        </div>
+        <div class="modal-body">
+        	<div class="row">
+	        	<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	        		<input type="radio" name="option1" value="1" ng-model="checkboxSelection"/>(Option 1)
+	        	</div>
+	            <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<label for="redmption_type" class="item">Redemption Type:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<label id="redmption_type" style="text-align: left">{{redmption_type}}</label>
+					</div>
+				</div>
+				 <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<label for="req_pts" class="item">Required Points:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<label id="req_pts" style="text-align: left">{{req_pts}}</label>
+					</div>
+				</div>
+				<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<label for="incrememts" class="item">Increments:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<label id="incrememts" style="text-align: left">{{incrememts}}</label>
+					</div>
+				</div>
+				 <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<label for="fast_track" class="item">Fast Track:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<label id="fast_track" style="text-align: left">{{fast_track}}</label>
+					</div>
+				</div>
+
+
+				<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	        		<input type="radio" name="option2" value="2" ng-model="checkboxSelection"/>(Option 2)
+	        	</div>
+	            <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<label for="redmption_type" class="item">Redemption Type:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<label id="redmption_type" style="text-align: left">{{redmption_type}}</label>
+					</div>
+				</div>
+				 <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<label for="req_pts" class="item">Required Points:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<label id="req_pts" style="text-align: left">{{req_pts}}</label>
+					</div>
+				</div>
+				<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<label for="incrememts" class="item">Increments:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<label id="incrememts" style="text-align: left">{{incrememts}}</label>
+					</div>
+				</div>
+				 <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<label for="fast_track" class="item">Fast Track:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<label id="fast_track" style="text-align: left">{{fast_track}}</label>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" ng-click="add_cart()" type="button">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="fasttrack2" role="dialog" tabindex="-1" data-backdrop="static">
+    <div class="modal-dialog" id="Modaldraggable3">
+      <div class="modal-content modal-lg">
+        <div class="modal-header">
+          <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+          <h4 class="modal-title">{{item_code}}</h4>
+        </div>
+        <div class="modal-body">
+        	<div class="row">
+	        	<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	        		<input type="radio" name="option1" value="1" ng-model="checkboxSelection"/>(Option 1)
+	        	</div>
+	            <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<label for="redmption_type" class="item">Redemption Type:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<label id="redmption_type" style="text-align: left">{{redmption_type}}</label>
+					</div>
+				</div>
+				 <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<label for="req_pts" class="item">Required Points:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<label id="req_pts" style="text-align: left">{{req_pts}}</label>
+					</div>
+				</div>
+				<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<label for="incrememts" class="item">Increments:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<label id="incrememts" style="text-align: left">{{incrememts}}</label>
+					</div>
+				</div>
+				 <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<label for="fast_track" class="item">Fast Track:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<label id="fast_track" style="text-align: left">{{fast_track}}</label>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" ng-click="add_cart()" type="button">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+</div>

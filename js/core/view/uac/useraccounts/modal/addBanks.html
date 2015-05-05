@@ -1,0 +1,21 @@
+<div class="modal-header">
+	<h4 class="modal-title" id="myModalLabel">Add Bank</h4>
+</div>
+<div class="modal-body">
+	<div id="add_messenger_body">
+		<div class="row row-space">
+			<div class="col-md-4">
+				<label class="item">Bank:</label>
+			</div>
+			<div class="col-md-8">
+				<select class="form-control" ng-model="selectedBank">
+					<option ng-repeat="bank in banksList" value="{{bank}}">{{bank.bankName}}</option>
+				</select>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-default" ng-click="add_button()">Add</button>
+	<button type="button" class="btn btn-primary" ng-click="close_button()">Close</button>
+</div>	

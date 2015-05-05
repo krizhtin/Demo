@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Loyalty Rewards System</title>
+
+		<!--                        Jquery                     -->
+		<script type="text/javascript" src="js/jquery/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/jquery/jquery.dataTables.min.js"></script>
+		<link rel="stylesheet" href="js/jquery/jquery.dataTables.min.css" />
+
+		<!--                        AngularJS                     -->
+		<script type="text/javascript" src="js/angularjs/angular.js"></script>
+		<script type="text/javascript" src="js/module/bdo.login.js"></script>
+		<script type="text/javascript" src="js/angularjs/angular-route.min.js"></script>
+		<script type="text/javascript" src="js/angularjs/angular-ui-router.js"></script>
+		<script type="text/javascript" src="js/angularjs/angular-resource.js"></script>
+		<script type="text/javascript" src="js/angularjs/angular-animate.js"></script>
+		<script type="text/javascript" src="js/angularjs/angular-touch.js"></script>
+		<script type="text/javascript" src="js/angularjs/angular-hateoas.js"></script>
+		<script type="text/javascript" src="js/angularjs/isteven-multi-select.js"></script>
+		<script type="text/javascript" src="js/angularjs/angular-ui-bootstrap.js"></script>
+		<link rel="stylesheet" href="css/isteven-multi-select.css" />
+
+		<!-- LOADING -->
+		<script type="text/javascript" src="js/angularjs/spin.js"></script>
+		<script type="text/javascript" src="js/angularjs/angular-spinner.js"></script>
+		<script type="text/javascript" src="js/angularjs/angular-loading-spinner.js"></script>
+
+		<!-- FILE UPLOAD -->
+		<script type="text/javascript" src="js/fileupload/ng-file-upload-all.js"></script>
+
+		<!--                        Bootstrap                     -->
+		<script type="text/javascript" src="js/bootstrap/js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/bootstrap/js/bootstrap-select.js"></script>
+		<script type="text/javascript" src="js/bootstrap/js/moment.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap/js/bootstrap-multiselect.js"></script>
+		<link rel="stylesheet" href="js/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="js/bootstrap/css/bootstrap-select.css" />
+		<link rel="stylesheet" href="js/bootstrap/css/bootstrap-datetimepicker.min.css" />
+		<link rel="stylesheet" href="js/bootstrap/css/bootstrap-theme.css" />
+
+		<!--                      JQWidget                      -->
+		<link rel="stylesheet" href="js/jqwidgets/styles/jqx.base.css" />
+    	<script type="text/javascript" src="js/jqwidgets/jqxcore.js"></script>
+    	<script type="text/javascript" src="js/jqwidgets/jqxtooltip.js"></script>
+
+		<!--                        MAIN JS                     -->
+		<script type="text/javascript" src="js/nrs/new_rewards_system.js"></script>
+		
+		<!--                        CORE                     -->
+		<script type="text/javascript" src="js/core/service/HateoasService.js"></script>
+		<script type="text/javascript" src="js/core/service/DataSourceService.js"></script>
+		<script type="text/javascript" src="js/core/service/UserService.js"></script>
+		<script type="text/javascript" src="js/core/service/AccessLevelService.js"></script>
+		<script type="text/javascript" src="js/core/service/BankService.js"></script>
+		<script type="text/javascript" src="js/core/service/GroupService.js"></script>
+		<script type="text/javascript" src="js/core/service/ReferenceTableService.js"></script>
+		<script type="text/javascript" src="js/core/service/MenuService.js"></script>
+		<script type="text/javascript" src="js/core/controller/uac/useraccounts/GridUserAccountsController.js"></script>
+		<script type="text/javascript" src="js/core/controller/uac/useraccounts/FormUserAccountsController.js"></script>
+		<script type="text/javascript" src="js/core/controller/uac/useraccounts/ViewUserAccountsController.js"></script>
+		<script type="text/javascript" src="js/core/controller/uac/useraccounts/GridUserAccountsController.js"></script>
+		<script type="text/javascript" src="js/core/controller/uac/accesslevels/AccessLevelsGridController.js"></script>
+		<script type="text/javascript" src="js/core/controller/uac/accesslevels/FormAccessLevelsController.js"></script>
+		<script type="text/javascript" src="js/core/controller/uac/groupprofiles/GroupProfilesGridController.js"></script>
+		<script type="text/javascript" src="js/core/controller/uac/groupprofiles/FormGroupProfilesController.js"></script>
+		<script type="text/javascript" src="js/core/controller/uac/monitorusers/GridMonitorUsersController.js"></script>
+		<script type="text/javascript" src="js/core/controller/uac/monitorusers/FormMonitorUsersController.js"></script>
+		<script type="text/javascript" src="js/core/controller/uac/monitorusers/ViewMonitorUsersController.js"></script>
+
+		<!--                        PARAMETER MAINTENANCE                     -->
+		<script type="text/javascript" src="js/core/controller/pm/referencetables/GridReferenceTablesController.js"></script>
+		<script type="text/javascript" src="js/core/controller/pm/referencetables/FormReferenceTablesController.js"></script>
+
+		<!--                        START OF NRS MODULES                     -->
+
+		<!-- 						SERVICES									 -->
+		<script type="text/javascript" src="js/nrs/service/BdoAccountService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/BdoCardService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/BdoCustomerService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/CardProfileService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/CatalogueStatusService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/CatalogueService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/CouponsService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/ItemCategoryService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/ItemRdmptnReqmntService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/PointsAdjustmentsService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/PointsBalanceService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/PointsHoldService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/PointsLiftService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/PointsTransferService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/ProductService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/RedemptionRequestService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/RedemptionRequirementService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/RedemptionStatusService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/RewardItemService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/ServiceProviderService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/VoucherService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/RafflePrizeService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/RaffleEntriesService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/FormRewardService.js"></script>
+		
+		<!--                        NRS SYSTEM CONFIGURATION                     -->
+		<script type="text/javascript" src="js/nrs/service/StoredProcedureService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/ParamsEligibilityFldsService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/ParamsEligibilityTablesService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/ParamsCndtnFldsService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/ParamsCndtnTablesService.js"></script>
+		<script type="text/javascript" src="js/nrs/service/ParamNotificationService.js"></script>
+		<script type="text/javascript" src="js/nrs/controller/RewardsConfiguration/GridRewardsConfigurationController.js"></script>
+
+		<!--                        REWARDS PROGRAM                     -->
+		<script type="text/javascript" src="js/nrs/service/RewardsProgramService.js"></script>
+		<script type="text/javascript" src="js/nrs/controller/RewardsProgram/GridRewardsProgramController.js"></script>		
+		<script type="text/javascript" src="js/nrs/controller/RewardsProgram/FormRewardsProgramController.js"></script>
+		<!--                        REWARDS PROGRAM COMPUTATION         -->
+		<script type="text/javascript" src="js/nrs/controller/RewardsProgram/GridPointsComputationController.js"></script>
+		<script type="text/javascript" src="js/nrs/service/PointsComputationService.js"></script>
+
+		<script type="text/javascript" src="js/nrs/controller/RewardsProgram/GridBonusComputationController.js"></script>
+		<script type="text/javascript" src="js/nrs/service/BonusComputationService.js"></script>
+
+		<script type="text/javascript" src="js/nrs/controller/RewardsProgram/GridRedemptionRequirementsController.js"></script>
+		<script type="text/javascript" src="js/nrs/service/RedemptionRequirementService.js"></script>
+
+		<script type="text/javascript" src="js/nrs/controller/RewardsProgram/GridPointsCreditingController.js"></script>
+		<script type="text/javascript" src="js/nrs/service/PointsCreditingService.js"></script>
+
+		<script type="text/javascript" src="js/nrs/controller/RewardsProgram/GridPointsExpiryController.js"></script>
+		<script type="text/javascript" src="js/nrs/service/PointsExpiryService.js"></script>
+
+		<script type="text/javascript" src="js/nrs/controller/RewardsProgram/GridChargeFeeInformationController.js"></script>
+       	<script type="text/javascript" src="js/nrs/service/ChargeFeeInformationService.js"></script>
+
+       	<script type="text/javascript" src="js/nrs/controller/RewardsProgram/GridPushNotificationController.js"></script>
+       	<script type="text/javascript" src="js/nrs/service/PushNotificationService.js"></script>
+
+		<!--                        ENROLLMENT                     -->
+		<script type="text/javascript" src="js/nrs/controller/IndividualEnrollmentGridController.js"></script>
+
+		<!--                        RAFFLE ROULETTE                     -->
+
+		<script type="text/javascript" src="js/nrs/controller/RaffleRoulette/GridRaffleRouletteController.js"></script>
+
+		<!--                        POINTS MANAGEMENT                     -->		
+		<script type="text/javascript" src="js/nrs/controller/Redemption/PointsManagement/FormPointsManagementController.js"></script>
+		<script type="text/javascript" src="js/nrs/controller/Redemption/PointsManagement/GridPointsManagementController.js"></script>
+
+		<!--                        MANUAL REDEMPTION                     -->
+		<script type="text/javascript" src="js/nrs/controller/Redemption/ManualRedemption/FormManualRedemptionController.js"></script>
+		<script type="text/javascript" src="js/nrs/controller/Redemption/ManualRedemption/GridManualRedemptionController.js"></script>
+		
+		<!--                        CATALOGUE ITEMS                     -->
+		<script type="text/javascript" src="js/nrs/controller/Redemption/CatalogueItems/GridCatalogueItemController.js"></script>
+		<script type="text/javascript" src="js/nrs/controller/Redemption/CatalogueItems/FormCatalogueItemController.js"></script>
+		
+		<!--                        COUPONS                     -->
+		<script type="text/javascript" src="js/nrs/controller/Redemption/Coupons/GridCouponsController.js"></script>
+
+		<!--                        VOUCHERS                     -->
+		<script type="text/javascript" src="js/nrs/controller/Redemption/Vouchers/GridVouchersController.js"></script>
+
+		<!--                        REDEMPTION LIST                     -->
+		<script type="text/javascript" src="js/nrs/controller/Redemption/RedemptionList/FormRedemptionListController.js"></script>
+		<script type="text/javascript" src="js/nrs/controller/Redemption/RedemptionList/GridRedemptionListController.js"></script>
+
+		<!--                        RAFFLE                     -->
+		<script type="text/javascript" src="js/nrs/controller/Raffle/Entries/GridRaffleEntriesController.js"></script>
+		<script type="text/javascript" src="js/nrs/controller/Raffle/Prize/GridRafflePrizeController.js"></script>
+
+
+		<!--                        BATCH PROCESSES                     -->
+        <script type="text/javascript" src="js/nrs/controller/BatchProcessesController.js"></script>
+
+        <!--                                                                                         END OF NRS MODULES                     -->
+		
+		<!--                        CORE NZ                     -->
+		<script type="text/javascript" src="js/core_nz/core_nz_angular.js"></script>
+		<script type="text/javascript" src="js/core_nz/core_nz_alertmessage.js"></script>
+		<script type="text/javascript" src="js/core_nz/core_nz_form.js"></script>
+		<script type="text/javascript" src="js/core_nz/core_nz_selectpicker.js"></script>
+		<script type="text/javascript" src="js/core_nz/core_nz_grid.js"></script>
+		<script type="text/javascript" src="js/core_nz/core_nz_loading.js"></script>
+		<script type="text/javascript" src="js/core_nz/core_nz_operation.js"></script>
+		<script type="text/javascript" src="js/core_nz/core_nz_tooltip.js"></script>
+		<script type="text/javascript" src="js/core_nz/core_nz_validation.js"></script>
+
+		<!--                        Others                     -->
+		<script type="text/javascript" src="js/core/core.js"></script>
+		<script type="text/javascript" src="js/module/bdo.angular.js"></script>
+		<script type="text/javascript" src="js/module/bdo.login.js"></script>
+		<script type="text/javascript" src="js/js/async.js"></script>
+		<link rel="stylesheet" href="css/app.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+	</head>
+	<body ng-app="mainSystemModule" style="overflow: auto !important;">
+		<div data-ng-include="'js/nrs/view/navigation_bar.html'"></div>
+		<div ui-view class="contentwrapper body"></div>
+	</body>	
+</html>

@@ -1,0 +1,57 @@
+<form id="gridSubmit" method="post">
+	<input type="hidden" name="user_id" id="user_id">
+</form>
+
+<div style="padding-bottom: 10px;" class="row clearfix" id="to-center">
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 column"></div>
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 column">
+		<div class="row clearfix">
+			<table class="search-table table-bordered">
+				<tr class="filter-table">
+					<td class="filter_a"><h5><span class="glyphicon glyphicon-search"></span>Filter by:</h5></td>
+					<td class="filter_b"><select ng-model="searchColumn" style="min-width:150px;" class="form-control">
+						<option value="username">Username</option>
+						<option value="name">Name</option>
+						<option value="group_id">Group Profile</option>
+						<option value="access_level_id">Access Level</option>
+						<option value="status">Status</option>
+						<option value="created_date">Creation Date</option>
+						<option value="expiry_date">Expire Date</option>
+					</select></td>
+					<td class="filter_c"><input id="value" ng-model="searchValue" class="form-control" placeholder="type here..."/></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 column"></div>
+</div>
+
+<div class="container-fluid grid">
+	<div class="panel panel-default">
+		<div class="title panel-heading">
+			<div class="row">
+				<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span> User Accounts</h4>
+				</div>
+				<div id="panel-right" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<span class="panel-right-button">
+						<a ui-sref="Create User Accounts">
+						<button id="create-new-user-button" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create New User</button></a></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel-body">
+				<bdo-table selectlist="perPageList" table-menu="bdoTable" page-info="pageInfo" columns="columns" data="data" actions="{view: true, edit: true, delete: true}"></bdo-table>
+			</div>
+
+			<div id="panel-right" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<br>
+			</div>
+			<div id="panel-right" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<button class="btn btn-primary" id="modal-user-account"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Generate Report</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

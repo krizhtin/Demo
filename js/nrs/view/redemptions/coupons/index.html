@@ -1,0 +1,67 @@
+
+		<div class="row row-space">
+			<div class="container">
+				<table class="table-bordered search-table">
+					<tbody>
+						<tr>
+							<td>
+								<h5><span class="glyphicon glyphicon-search"></span>Filter by:</h5>
+							</td>
+							<td>
+								<select style="min-width:150px;" id="filter" class="form-control">
+									<option value="username">Coupon Number</option>
+									<option value="">Redemption Status</option>
+									<option value="">Account Number</option>
+								</select>
+							</td>
+							<td>
+								<input class="form-control" aria-disabled="false" aria-readonly="false" placeholder="Type Here...">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="container-fluid grid">
+			<div class="panel panel-default">
+				<div class="title panel-heading">
+					<div class="row">
+						<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<h4>Coupons</h4>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel-body">
+					<bdo-table selectlist="perPageList" table-menu="CouponsGrid" page-info="pageInfo" columns="columns" data="data" actions="{view: false, edit: true, delete: false}"></bdo-table>
+				</div>
+			</div>
+		</div>
+
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="regen_modal" role="dialog" tabindex="-1" data-backdrop="static">
+    <div class="modal-dialog" id="Modaldraggable3">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+          <h4 class="modal-title">Regenerate Voucher</h4>
+        </div>
+        <div class="modal-body">
+        	<div class="row">
+	        	<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<label for="reason" class="item">Reason for Regeneration:</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<input type="text" class="form-control" id="reason" ng-model="reason">
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" ng-click="save()" type="button">Save</button>
+          <button class="btn btn-primary" ng-click="cancel()" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+<div class="container">
+	<form class="form-inline">
+	
+		<div class="panel panel-default">
+			<div class="title panel-heading">
+				<div class="row">
+					<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<h4>Raffle Prizes</h4>
+					</div>
+				</div>
+			</div>
+			
+			<div class="panel-body">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br></div>
+				
+				<div class="row clearfix">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label for="prize_id" class="item">Prize ID:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<input type="text" class="input form-control" id="prize_id" disabled="disabled" />
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label for="prize_name" class="item">Prize Name:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<input type="text" class="input form-control" id="prize_name" />
+						</div>
+					</div>
+				</div>
+				
+				<br>
+				
+				<div class="row clearfix">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label for="prize_desc" class="item">Prize Description:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<textarea rows="4" style="width:100%" class="form-control" id="prize_desc"></textarea>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label for="rew_prog" class="item">Rewards Program:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+			 				<select id="rewardsProgram" class="form-control" ng-model="rewards_Program">
+								<option ng-repeat="item in rewardsPrograms" value="{{$index}}">{{item.programname}}</option>
+			 				</select>
+						</div>
+					</div>
+				</div>
+			      
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br></div>
+		
+				<div class="row command">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<button id="save" class="btn btn-default">Save</button>
+						<button id="cancel" class="btn btn-default">Cancel</button>
+					</div>
+				</div>
+			      
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br></div>
+			</div>
+		</div>
+		
+	</form>
+</div>

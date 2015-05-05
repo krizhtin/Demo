@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bdoLogin">
+<head>
+	<title>BDO - Login</title>
+
+	<script src="js/jquery/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/angularjs/angular.js"></script>
+	
+	<!-- LOADING -->
+	<script type="text/javascript" src="js/angularjs/spin.js"></script>
+	<script type="text/javascript" src="js/angularjs/angular-spinner.js"></script>
+	<script type="text/javascript" src="js/angularjs/angular-loading-spinner.js"></script>
+	
+	<script type="text/javascript" src="js/module/bdo.login.js"></script>
+	<script type="text/javascript">
+	angular.module('bdoLogin', ['bdo.login', 'ngLoadingSpinner'])
+	.controller('LoginController', ['$scope', 'bdoUser', '$http', function ($scope, bdoUser, $http) {
+		$scope.login = function () {
+			$http({
+				
+				url: '/rp/oauth/token',
+				// url: '/oauth/token',
+
+				method: 'POST',
+				params: {
+					grant_type: 'password',
+					client_id: 'web',
+					username: $scope.username,
+					password: $scope.password
+				},
+				headers: {
+					'Authorization': 'Basic d2ViOg=='
+				}
+			}).success(function (data) {
+				bdoUser.set(data);
+
+				window.location.href = '/bdo-nrs/nrs.html';
+
+			}).error(function (data) {
+				alert('login failed');
+			});
+		};
+	}])
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body class="login-style">
+	<div id="container">
+		<span us-spinner="{radius:30, width:8, length: 16}"></span>
+		<div id="login-box">
+			<div class="text-center">
+				<img id="login-logo" alt="BDO Logo" src="images/bdo-logo.png">
+			</div>
+			<div>
+				<div id="login-table" ng-controller="LoginController">
+					<form ng-submit="login()">
+						<br>
+						<div>
+							<div id="login-error"></div>
+						</div>
+						<div class="user-div login-div row-space">
+							<input ng-model="username" id="username-id" name="username" type="text" placeholder="LDAP Login" class="form-control" />
+							<select id="domain" class="form-control" >
+								<option>Standard</option>
+								<option>@gmail.com</option>
+								<option>@hotmail.com</option>
+								<option>@yahoo.com</option>
+							</select>
+						</div>
+						<div class="row-space login-div">
+							<input ng-model="password" id="password-id" name="password" type="password" placeholder="Password" class="form-control" />
+							<div class="login-icon"><img class="icon" src='images/password-icon2.png' /></div>
+						</div>
+						<div id="ldap-holder" style="text-align: center;">
+							<a href="udts"><input type="submit" id="login-btn" value="Login" class="btn btn-default" /></a>
+						</div>
+						<br>
+						<div id="forgot" style="text-align: center;">
+							<a ui-sref="#" style="color: #23527c;">Forgot Password</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

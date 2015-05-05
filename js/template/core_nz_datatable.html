@@ -1,0 +1,36 @@
+<div>
+	<table class="display table" cellspacing="0" width="100%">
+		<thead>
+			<tr>
+				<th ng-repeat="column in columns">{{column.title}}</th>
+			</tr>
+		</thead>
+
+		<tbody >
+			<tr ng-repeat="user in data">
+				<td ng-repeat="column in columns">{{user[column.datafield]}}</td>
+			</tr>
+		</tbody>
+
+		<tfoot>
+			<tr>
+				<th ng-repeat="column in columns">{{column.title}}</th>
+			</tr>
+		</tfoot>
+	</table>
+	<nav>
+		<ul class="pagination">
+			<li>
+				<a ng-click="gotoPreviousPage()" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+				</a>
+			</li>
+			<!-- <li ng-repeat="pageNum in $parent.pages"><a ng-click="goToPage(pageNum)">{{pageNum}}</a></li> -->
+			<li>
+				<a ng-click="gotoNextPage()" aria-label="Next">
+					<span aria-hidden="true">&raquo;</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</div>

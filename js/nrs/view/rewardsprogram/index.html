@@ -1,0 +1,46 @@
+<form id="gridSubmit" method="post">
+	<input type="hidden" name="rewards_program_id" id="rewards_program_id">
+</form>
+
+<div style="padding-bottom: 10px;" class="row clearfix" id="to-center">
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 column"></div>
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 column">
+		<div class="row clearfix">
+			<table class="search-table table-bordered">
+				<tr class="filter-table">
+					<td class="filter_a"><h5><span class="glyphicon glyphicon-search"></span>Filter by:</h5></td>
+					<td class="filter_b"><select ng-model="filterColumn" style="min-width:150px;" id="filter" class="form-control">
+						<option value=name>Bank Code</option>
+						<option value="name">Rewards Program</option>
+						<option value="name">Valid From</option>
+						<option value="name">Valid Until</option>
+						<option value="name">Status</option>
+					</select></td>
+					<td class="filter_c"><input id="value" ng-model="filterValue" class="form-control" placeholder="type here..."/></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 column"></div>
+</div>
+
+<div class="container-fluid grid">
+	<div class="panel panel-default">
+		<div class="title panel-heading">
+			<div class="row">
+				<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Rewards Program</h4>
+				</div>
+				<div id="panel-right" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<span class="panel-right-button">
+					<a ui-sref="Create Rewards Program">
+					<button id="create-new-program-button" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create New Program</button></a></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="panel-body">
+			<bdo-table selectlist="perPageList" table-menu="bdoTable" page-info="pageInfo" columns="columns" data="data" actions="{view: true, edit: true, delete: true}"></bdo-table>
+		</div>
+	</div>
+</div>	

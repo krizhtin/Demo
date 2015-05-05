@@ -1,0 +1,62 @@
+<div class="container">		
+	<div class="container">
+		<div class="panel panel-default">
+			<div class="title panel-heading">
+				<div class="row">
+					<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<input id="group_id" ng-model="group.id" type="hidden"/>
+						<h4 id="group-form-title"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> {{formTitle}}</h4>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="form-inline">
+					<div class="row">
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">									
+								<label for="group_code" class="item">Group Code:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<input type="text" class="input form-control" id="group_groupCode" ng-model="group.groupCode">
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="group_name" class="item">Group Name:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<input type="text" class="input form-control" id="group_groupName" ng-model="group.groupName">
+							</div>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<label for="group_desc" class="item">Description:</label>
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<input type="text" class="input form-control" id="group_groupDesc" ng-model="group.groupDesc">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="command">
+							<button type="button" class="btn btn-primary" ng-click="save_button()" tabindex="4">Save</button>
+							<button type="button" class="btn btn-primary" ng-click="cancel_button()" tabindex="5" data-toggle="modal" data-target="#cancelform">Cancel</button>
+						</div>
+					</div>
+				</div>			
+			</div>
+		</div>		
+		<div class="panel panel-default">
+			<div class="title panel-heading">
+				<div class="row">
+					<div id="panel-left" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Module</h4>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<bdo-table selectlist="perPageList" action="false" table-menu="bdoTable" page-info="pageInfo" columns="columns" data="data" actions="{view: true, edit: true, delete: true}"></bdo-table>
+			</div>
+		</div>
+	</div>
+</div>

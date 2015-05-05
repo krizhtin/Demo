@@ -1,0 +1,47 @@
+<div class="modal-header">
+    <h3 class="modal-title">Rewards Eligibility</h3>
+</div>
+<div class="modal-body">
+	<div class="form-inline">
+		<div class="row clearfix">
+			<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<label for="tablename" class="item">Table Name:</label>
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+					<select id="tablename" class="form-control" ng-model="re.tablename" >
+						<option value="">-Select-</option>
+						<option ng-repeat="table in tableNames" value="{{$index}}">{{table.tableName}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+			
+		<div class="row clearfix">
+			<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<label for="fieldname" class="item">Field Name:</label>
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+	 				<select id="fieldname" class="form-control" ng-model="re.fieldname">
+						<option ng-repeat="fields in appTableFields" value="{{$index}}">{{fields.fieldName}}</option>
+	 				</select>
+				</div>
+			</div>
+		</div>
+			
+		<div class="row clearfix">
+			<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<label for="usevalues" class="item">Use Values:</label>
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+					<input type="checkbox" id="usevalues" tabindex="3">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-footer">
+    <button id="add" type="button" class="btn btn-primary" ng-click="add()">Add</button><button id="cancel" type="button" class="btn btn-primary" ng-click="cancel()">Cancel</button>
+</div>

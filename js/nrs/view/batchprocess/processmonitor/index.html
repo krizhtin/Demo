@@ -1,0 +1,36 @@
+
+<div class="container-fluid grid">
+	<div class="panel panel-default">
+		<div class="title panel-heading">
+			<div class="row">
+				<div id="panel-left" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<h4><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Batch Monitor</h4>
+				</div>
+				<div id="panel-right" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<span class="panel-right-button">
+						<button id="create-new-user-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#pause">Pause</button></span>
+				</div>
+			</div>
+		</div>
+		<div class="panel-body">
+			<br/>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="pause" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="width:450px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Confirmation Message</h4>
+      </div>
+      <div class="modal-body">
+        <span class="panel-left"><img class="confirm-icon" src="images/confirmation-image.png"></span><span>Are you sure you want to pause selected task?</span>
+      </div>
+      <div class="modal-footer">
+        <a ui-sref="index.html"><button type="button" class="btn btn-default">Yes</button></a>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,225 @@
+/*
+Documentation for ID and classes
+#container
+#login-box
+#login-table
+#login-button
+#login-logo
+*/
+
+body {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-image: url("../images/background/login-background2.jpg");
+	background-size: cover;
+}
+
+img {
+    vertical-align: middle;
+}
+
+form {
+	display: inline;
+}
+
+a, a:link, a:active, a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+/*
+Stuff with IDs are here
+*/
+
+#login-box {
+    align: center;
+	width: 600px;
+	height: 375px;
+	margin: 100px auto;
+	padding-top: 25px;
+	background-color: rgba(255,255,255, 0.7);
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 50px -15px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,.75);
+	box-shadow: 0px 0px 10px 1px rgba(0,0,0,.75);
+}
+
+#login-table {
+	margin: 0 auto;
+	text-align: center;
+	width: 300px;
+}
+table#login-table {
+	width: 100%;
+}
+
+input#password-id {
+	border: 1px solid #B3B3B3;
+}
+
+input#username-id {
+	width: 55%;
+	float: left;
+	border-radius: 4px 0 0 4px;
+	border: 1px solid #B3B3B3;
+	border-right: 0;
+}
+
+select#domain {
+	width: 45%;
+	float: left;
+	padding-left: 2px;
+	padding-right: 5px;
+	background-color: #A9A9A9;
+	border-radius: 0 4px 4px 0;
+	color: #FFFFFF;
+	border: 1px solid #9D9D9D;
+}
+
+ul.ui-autocomplete{
+	background-color: #fff;
+	border: #ccc solid 1px;
+	width: 111px;
+	list-style-type: none;
+	padding: 0;
+}
+
+.ui-autocomplete>li:hover, .ui-autocomplete>li:active {
+	background-color: #ddd;
+}
+
+.ui-autocomplete>li {
+	padding-left: 5px;
+}
+
+li.ui-state-hover, li.ui-state-focus {
+    background: #ddd !important;
+}
+
+#login-button-container {
+	text-align: right;
+}
+
+#login-button {
+	font-size: 40px;
+	background: none;
+	background-color: none;
+	border: 0;
+}
+
+#login-button {
+	color: #a9a9a9;
+	cursor: pointer;
+}
+
+button:hover#login-button {
+	color: #ffffff;
+}
+
+#login-arrow {
+	font-size: 40px;
+}
+
+
+img#login-logo {
+	height: 100px;
+	width: auto;
+}
+
+/*
+Stuff with class are here
+*/
+
+img.icon {
+	height: 26px;
+	width: auto;
+}
+
+input.login-field {
+	border: 2px #a9a9a9 solid;
+	height: 30px;
+	width: 200px;
+	text-align: left;
+	border-radius: 5px;
+	padding-left: 5px;
+}
+
+div.container {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.jqx-tabs-content,
+.jqx-tabs-header {
+	background-color: transparent !important;
+/* 	border: 0px solid transparent !important; */
+}
+
+#jqxTabs {
+	width: 300px !important;
+}
+
+#jqxTabs, .jqx-tabs-title-hover-top {
+	border: 0px solid transparent !important;
+	padding-bottom: 0px !important;
+}
+
+ .jqx-tabs-title {
+	background-color: transparent !important;
+	border-bottom: 0px solid transparent !important;
+ }
+
+.jqx-tabs-title-container {
+	background-color: transparent !important;
+}
+
+.login-input-div {
+	position: relative;
+	height: 34px;
+	margin-top: 15px;
+}
+
+.ldap-tab-header-style div div.jqx-tabs-headerWrapper {
+	border-color: #ADADAD;
+}
+
+.row-space {
+	margin-bottom: 15px;
+}
+
+.border-clear {
+	border: 1px solid #B3B3B3 !important;
+}
+
+#username-id, #password-id, input#password-id-ldap {
+	width: 88.5%;
+	float: left;
+	border-radius: 4px 0 0 4px;
+	border: 1px solid #B3B3B3;
+	border-right: 0;
+}
+
+.login-icon {
+	background-color: #4D4D4D;
+	border-radius: 0 4px 4px 0;
+	color: #FFFFFF;
+	border: 1px solid #4D4D4D;
+	display: inline-block;
+	padding: 3px;
+	float: left;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.big-bottom-space {
+	margin-bottom: 50px;
+}
+
+.login-div {
+	position: relative;
+	height: 34px;
+}

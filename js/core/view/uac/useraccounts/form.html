@@ -1,0 +1,194 @@
+<div class="container-fluid">
+	<div class="panel panel-default">
+		<div class="title panel-heading">
+			<h4><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> {{ formTitle }}</h4>
+		</div>
+		<div class="panel-body">
+			<div class="form-inline">
+				<div class="row clearfix">
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<input type="hidden" id="user_id" ng-model="user.id">
+							<label for="username" class="item">Username:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="user_name" tabindex="1" ng-model="user.username" />
+						</div>
+						
+					</div>
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label for="email_address" class="item">Email Address:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="user_email" ng-model="user.email" >
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label for="first_name" class="item">First Name:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="user_firstName" ng-model="user.firstName"  tabindex="2">
+						</div>
+					</div>
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label for="contact_details" class="item">Contact Details:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="user_contactDetails" ng-model="user.contactDetails"  tabindex="10">
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label for="middle_name" class="item">Middle Name:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="user_middleName" ng-model="user.middleName" tabindex="3">
+						</div>
+					</div>
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label for="dept" class="item">Department:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="user_department" ng-model="user.department" tabindex="11">
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 validation hide">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><br></div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"><small class="mn hide"></small></div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 validation hide" style="float: right;">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><br></div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"><small class="dept hide"></small></div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label for="last_name" class="item">Last Name:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="user_surname" ng-model="user.surname" tabindex="4">
+						</div>
+					</div>
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label for="position" class="item">Position:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="user_position" ng-model="user.position" tabindex="12">
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 validation hide">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><br></div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"><small class="ln hide"></small></div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 validation hide" style="float: right;">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><br></div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"><small class="pos hide"></small></div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label for="suffix_name" class="item">Suffix Name:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="user_nameSuffix" ng-model="user.nameSuffix" tabindex="5">
+						</div>
+					</div>
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label for="location" class="item">Location:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="user_location" ng-model="user.location" tabindex="13">
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label class="item">Expiry Date:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<div class="input-group input-date">
+								<input id='user_expiryDate' ng-model="user.expiryDate" type="text" class="form-control"/>
+								<span class="input-group-addon">
+									<span class="glyphicon-calendar glyphicon"></span>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label for="access_level_id" class="item">Access Level:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<select id="user_accessLevel" class="form-control" ng-model="user.accessLevel._links.self.href" >
+								<option ng-repeat="item in accessLevelsList track by $index" {{ $index == 0 ? "selected" : ''}} value="{{item._links.self.href}}">{{item.accessLevelName}}</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label for="status" class="item">Status:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<select class="form-control" id="user_status" ng-model="user.status" >
+								<option ng-repeat="item in statusList">{{item}}</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label for="remarks" class="item">Remarks:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="user_remarks" ng-model="user.remarks">
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label for="banks" class="item">Bank:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<div id="user_banks" isteven-multi-select input-model="banksList" min-search-length="5" max-labels="5" output-model="selectedBanksList" button-label="bankName" item-label="bankName" tick-property="ticked"></div>
+						</div>
+					</div>
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<label for="groups" class="item">Group Profile:</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+							<div id="user_groups" isteven-multi-select input-model="groupsList" min-search-length="5" output-model="selectedGroupsList" button-label="groupName" item-label="groupName" tick-property="ticked"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="command">
+						<button type="submit" class="btn btn-primary" ng-click="save_button()" id="save">Save</button>
+						<button type="button" class="btn btn-danger" ng-click="cancel_button()" id="cancel">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

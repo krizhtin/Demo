@@ -1,0 +1,31 @@
+<div class="modal-header">
+    <h3 class="modal-title">Notification Message</h3>
+</div>
+<div class="modal-body">
+	<div class="form-inline">
+		<div class="row clearfix">
+			<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<label for="messageCode" class="item">Message Code:</label>
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+					<input type="text" class="input form-control" id="messageCode" ng-model="nm.messageCode" />
+				</div>
+			</div>
+		</div>
+			
+		<div class="row clearfix">
+			<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<label for="message" class="item">Message:</label>
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+					<textarea class="form-control" rows="3" id="message" style="width: 100%; padding-right: 0px;" ng-model="nm.message" >{{message}}</textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-footer">
+    <button id="add" type="button" class="btn btn-primary" ng-click="add()">Add</button><button id="cancel" type="button" class="btn btn-primary" ng-click="cancel()">Cancel</button>
+</div>
